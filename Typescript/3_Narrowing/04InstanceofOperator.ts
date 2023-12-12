@@ -15,4 +15,18 @@ class SuperUser extends User {
 }
 
 const jhon = new User("Jhon");
-const paul = new User("Paul");
+const paul = new SuperUser("Paul");
+
+console.log(jhon);
+console.log(paul);
+
+function userGreeting(user: object) {
+  if (user instanceof SuperUser) {
+    console.log(`Olá ${user.name}, deseja ver os dados do sistema?`);
+  } else if (user instanceof User) {
+    console.log(`Olá ${user.name}`);
+  }
+}
+
+userGreeting(jhon);
+userGreeting(paul);
