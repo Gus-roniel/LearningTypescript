@@ -15,4 +15,5 @@ type myType = B extends A ? number : string;
 
 const someVar: myType = 5;
 
-type myTypeB = Teste extends { showNumber(): number } ? string : boolean; //será boolean, pois Teste não extende showNumber
+type myTypeB = Teste extends { showNumber(): number } ? string : boolean;
+//será boolean, pois Teste não extende showNumber
